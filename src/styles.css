@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Target the select element */
+select.font-bold.appearance-none.bg-transparent {
+  /* Add your custom icon color */
+  color: red;
+}
