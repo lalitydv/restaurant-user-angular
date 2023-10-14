@@ -3,11 +3,27 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './Auth/login/login.component';
+import { SignupComponent } from './Auth/signup/signup.component';
+import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.component';
+import { PolicyComponent } from './policy/policy.component';
 
 const routes: Routes = [
   {
-    path: '/' ,
+    path: '' ,
     component: HomeComponent
+  },
+  {
+    path: 'login' ,
+    component: LoginComponent
+  },
+  {
+    path: 'signup' ,
+    component: SignupComponent
+  },
+  {
+    path: 'forgotPassword' ,
+    component: ForgotPasswordComponent
   },
   {
     path: 'about' ,
@@ -16,6 +32,10 @@ const routes: Routes = [
   {
     path: 'contact' ,
     component: ContactComponent
+  },
+  {
+    path: 'Policy' ,
+    component: PolicyComponent
   },
 ];
 
