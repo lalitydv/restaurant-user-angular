@@ -13,6 +13,10 @@ import { LoginComponent } from './Auth/login/login.component';
 import { SignupComponent } from './Auth/signup/signup.component';
 import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.component';
 import { AfterenteComponent } from './Auth/afterente/afterente.component';
+import { OfferComponent } from './offer/offer.component';
+import { MenuComponent } from './Menus/menu/menu.component';
+import { NonVegComponent } from './Menus/non-veg/non-veg.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { AfterenteComponent } from './Auth/afterente/afterente.component';
     LoginComponent,
     SignupComponent,
     ForgotPasswordComponent,
-    AfterenteComponent
+    AfterenteComponent,
+    OfferComponent,
+    MenuComponent,
+    NonVegComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,

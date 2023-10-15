@@ -1,0 +1,32 @@
+    <!-- menu cart items -->
+
+    <div class=" mx-10 my-10 ">
+
+        <div class="flex justify-between">
+            <div class="font-bold text-2xl text-blue">
+                Our Menu
+            </div>
+            <div class="p-2 border-2 border-Pink rounded-lg px-10">
+                View All
+            </div>
+        </div>
+
+    </div>
+    <div class="flex justify-around flex-wrap gap-5 mx-5">
+        <div *ngFor="let tile of tiles">
+            <div
+                class="shadow-2xl bg-white hover:bg-LightPink hover:text-Pink hover:border-2 hover:border-Pink border-0 rounded-lg flex justify-center items-center flex-col p-5">
+                <a href="#">
+                    <img src="{{ tile.img }}" class="w-40 h-40 object-contain" />
+                </a>
+                <div>
+
+                    <p class="mb-3  font-bold text-md dark:text-gray-400">{{ tile.name }}</p>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- menu cart items -->

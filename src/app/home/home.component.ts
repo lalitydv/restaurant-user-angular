@@ -25,13 +25,7 @@ export class HomeComponent  {
     {name:'Serve with mayo and green chili sauce.',sortname:'Onion Rings',Price:'900',img:'assets/Product/Rectangle 381.png'},
 
   ]
-  Poster1:any=[
-    {img:'assets/Poster/poster1.png',img2:'assets/Poster/poster2.png'},
-    
-   
  
-
-  ]
   PopularPro:any=[
     {name:'Serve with mayo and green chili sauce.',sortname:'Onion Rings',Price:'900',img:'assets/Product/pizza.png'},
     {name:'Serve with mayo and green chili sauce.',sortname:'Onion Rings',Price:'900',img:'assets/Product/pizza.png'},

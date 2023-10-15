@@ -9,8 +9,9 @@ module.exports = {
         LightPink: "#FDD4E5",
         blue: "#2E108E",
         Admin: "#F97316",
-        Admin: "#10B981",
-        Admin: "#F97316",
+        Customer: "#10B981",
+        Manager: "#0284C7",
+        Operator: "#A855F7",
         
       },
       backgroundImage: {

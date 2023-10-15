@@ -7,6 +7,9 @@ import { LoginComponent } from './Auth/login/login.component';
 import { SignupComponent } from './Auth/signup/signup.component';
 import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.component';
 import { PolicyComponent } from './policy/policy.component';
+import { AfterenteComponent } from './Auth/afterente/afterente.component';
+import { OfferComponent } from './offer/offer.component';
+import { MenuComponent } from './Menus/menu/menu.component';
 
 const routes: Routes = [
   {
@@ -26,8 +29,20 @@ const routes: Routes = [
     component: ForgotPasswordComponent
   },
   {
+    path: 'afterente' ,
+    component: AfterenteComponent
+  },
+  {
+    path: 'offer' ,
+    component: OfferComponent
+  },
+  {
     path: 'about' ,
     component: AboutComponent
+  },
+  {
+    path: 'menu' ,
+    component: MenuComponent
   },
   {
     path: 'contact' ,
