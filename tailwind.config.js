@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts}"],
+  content: ["node_modules/preline/dist/*.js", "./src/**/*.{html,ts}"],
   theme: {
     extend: {
       colors: {
@@ -12,12 +12,11 @@ module.exports = {
         Customer: "#10B981",
         Manager: "#0284C7",
         Operator: "#A855F7",
-        
       },
       backgroundImage: {
         footer: "url('/assets/Home/footerbg.svg')",
       },
     },
   },
-  plugins: [],
+  plugins: [require("preline/plugin")],
 };

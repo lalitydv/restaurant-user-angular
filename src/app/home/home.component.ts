@@ -14,6 +14,7 @@ export class HomeComponent  {
     {name:'Beef Entries',img:'assets/Menu/image 13.png'},
 
   ]
+  
   Product:any=[
     {name:'Serve with mayo and green chili sauce.',sortname:'Onion Rings',Price:'900',img:'assets/Product/Rectangle 381.png'},
     {name:'Serve with mayo and green chili sauce.',sortname:'Onion Rings',Price:'900',img:'assets/Product/Rectangle 381.png'},

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +17,7 @@ import { OfferComponent } from './offer/offer.component';
 import { MenuComponent } from './Menus/menu/menu.component';
 import { NonVegComponent } from './Menus/non-veg/non-veg.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { UpliftingordernowComponent } from './upliftingordernow/upliftingordernow.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +35,16 @@ import { ReservationComponent } from './reservation/reservation.component';
     OfferComponent,
     MenuComponent,
     NonVegComponent,
-    ReservationComponent
+    ReservationComponent,
+    UpliftingordernowComponent,
+   
   ],
   imports: [
+    
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

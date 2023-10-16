@@ -10,6 +10,8 @@ import { PolicyComponent } from './policy/policy.component';
 import { AfterenteComponent } from './Auth/afterente/afterente.component';
 import { OfferComponent } from './offer/offer.component';
 import { MenuComponent } from './Menus/menu/menu.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { UpliftingordernowComponent } from './upliftingordernow/upliftingordernow.component';
 
 const routes: Routes = [
   {
@@ -43,6 +45,14 @@ const routes: Routes = [
   {
     path: 'menu' ,
     component: MenuComponent
+  },
+  {
+    path: 'reservation' ,
+    component: ReservationComponent
+  },
+  {
+    path: 'upliftingordernow' ,
+    component: UpliftingordernowComponent
   },
   {
     path: 'contact' ,
