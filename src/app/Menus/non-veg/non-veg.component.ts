@@ -23,5 +23,14 @@ export class NonVegComponent {
     {name:'Serve with mayo and green chili sauce.',sortname:'Onion Rings',Price:'900',img:'assets/Product/pizza.png'},
 
   ]
+  isPopupOpen = false;
+
+  openPopup() {
+    this.isPopupOpen = true;
+  }
+
+  closePopup() {
+    this.isPopupOpen = false;
+  }
 
 }

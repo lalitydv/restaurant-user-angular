@@ -18,6 +18,9 @@ import { MenuComponent } from './Menus/menu/menu.component';
 import { NonVegComponent } from './Menus/non-veg/non-veg.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { UpliftingordernowComponent } from './upliftingordernow/upliftingordernow.component';
+import { SavoryandsatisfyingComponent } from './savoryandsatisfying/savoryandsatisfying.component';
+import { ZoomiconComponent } from './Menus/zoomicon/zoomicon.component';
+
 
 @NgModule({
   declarations: [
@@ -35,8 +38,10 @@ import { UpliftingordernowComponent } from './upliftingordernow/upliftingorderno
     OfferComponent,
     MenuComponent,
     NonVegComponent,
+    ZoomiconComponent,
     ReservationComponent,
     UpliftingordernowComponent,
+    SavoryandsatisfyingComponent,
    
   ],
   imports: [

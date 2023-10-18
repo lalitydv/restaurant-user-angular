@@ -12,6 +12,8 @@ import { OfferComponent } from './offer/offer.component';
 import { MenuComponent } from './Menus/menu/menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { UpliftingordernowComponent } from './upliftingordernow/upliftingordernow.component';
+import { SavoryandsatisfyingComponent } from './savoryandsatisfying/savoryandsatisfying.component';
+import { ZoomiconComponent } from './Menus/zoomicon/zoomicon.component';
 
 const routes: Routes = [
   {
@@ -53,6 +55,14 @@ const routes: Routes = [
   {
     path: 'upliftingordernow' ,
     component: UpliftingordernowComponent
+  },
+  {
+    path: 'savoryandsatisfying' ,
+    component: SavoryandsatisfyingComponent
+  },
+  {
+    path: 'zoomicon' ,
+    component: ZoomiconComponent
   },
   {
     path: 'contact' ,
