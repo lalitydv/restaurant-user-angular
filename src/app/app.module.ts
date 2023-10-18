@@ -20,8 +20,7 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { UpliftingordernowComponent } from './upliftingordernow/upliftingordernow.component';
 import { SavoryandsatisfyingComponent } from './savoryandsatisfying/savoryandsatisfying.component';
 import { ZoomiconComponent } from './Menus/zoomicon/zoomicon.component';
-
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,9 +44,10 @@ import { ZoomiconComponent } from './Menus/zoomicon/zoomicon.component';
    
   ],
   imports: [
-    
+    FontAwesomeModule,
     BrowserModule,
     AppRoutingModule,
+    
    
     
   ],
