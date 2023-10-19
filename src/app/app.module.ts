@@ -21,6 +21,10 @@ import { UpliftingordernowComponent } from './upliftingordernow/upliftingorderno
 import { SavoryandsatisfyingComponent } from './savoryandsatisfying/savoryandsatisfying.component';
 import { ZoomiconComponent } from './Menus/zoomicon/zoomicon.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyordersComponent } from './myorders/myorders.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ChatComponent } from './chat/chat.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +45,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ReservationComponent,
     UpliftingordernowComponent,
     SavoryandsatisfyingComponent,
+    CheckoutComponent,
+    MyordersComponent,
+    EditProfileComponent,
+    ChatComponent,
    
   ],
   imports: [

@@ -14,6 +14,10 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { UpliftingordernowComponent } from './upliftingordernow/upliftingordernow.component';
 import { SavoryandsatisfyingComponent } from './savoryandsatisfying/savoryandsatisfying.component';
 import { ZoomiconComponent } from './Menus/zoomicon/zoomicon.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyordersComponent } from './myorders/myorders.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
   {
@@ -65,9 +69,30 @@ const routes: Routes = [
     component: ZoomiconComponent
   },
   {
+    path: 'checkout' ,
+    component: CheckoutComponent
+  },
+  {
+    path: 'myorder' ,
+    component: MyordersComponent
+  },
+  {
+    path: 'editprofile' ,
+    component: EditProfileComponent
+  },
+  {
+    path: 'chat' ,
+    component: ChatComponent
+  },
+  {
+    path: 'editprofile' ,
+    component: EditProfileComponent
+  },
+  {
     path: 'contact' ,
     component: ContactComponent
   },
+ 
   {
     path: 'Policy' ,
     component: PolicyComponent
