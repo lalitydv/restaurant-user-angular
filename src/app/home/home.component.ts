@@ -5,6 +5,7 @@ import { Component  } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent  {
+ 
   tiles:any=[
     {name:'Appetizers',img:'assets/Menu/Group 339040.png'},
     {name:'Flame Grill Burgers',img:'assets/Menu/image 9.png'},
