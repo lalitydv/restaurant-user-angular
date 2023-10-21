@@ -12,6 +12,7 @@ module.exports = {
         Customer: "#10B981",
         Manager: "#0284C7",
         Operator: "#A855F7",
+        cartbg: "#D0D0D0"
       },
       backgroundImage: {
         footer: "url('/assets/Home/footerbg.svg')",
