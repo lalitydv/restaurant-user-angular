@@ -25,6 +25,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { MyordersComponent } from './myorders/myorders.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ChatComponent } from './chat/chat.component';
+import { initFlowbite } from 'flowbite';
+import { OnInit } from '@angular/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,5 +63,10 @@ import { ChatComponent } from './chat/chat.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
-export class AppModule { }
+export class AppModule implements OnInit {
+  ngOnInit(): void {
+    initFlowbite();
+  }
+ }

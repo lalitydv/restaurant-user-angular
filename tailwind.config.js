@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts}"],
+  content: [
+    "./src/**/*.{html,ts}",
+    "./node_modules/flowbite/**/*.js", // add this line
+  ],
   theme: {
     extend: {
       colors: {
@@ -12,12 +15,12 @@ module.exports = {
         Customer: "#10B981",
         Manager: "#0284C7",
         Operator: "#A855F7",
-        cartbg: "#D0D0D0"
+        cartbg: "#D0D0D0",
       },
       backgroundImage: {
         footer: "url('/assets/Home/footerbg.svg')",
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
