@@ -1,0 +1,163 @@
+<div class="my-10">
+    <a href="/">
+        <div class="text-Pink mx-10 font-bold text-xl">
+            <i class="fa-solid fa-arrow-left mx-5"></i> Back to Home
+        </div>
+    </a>
+    <div class="flex justify-around items-center">
+        <div class="font-bold text-2xl text-blue underline underline-offset-8">
+            Address
+        </div>
+
+        <div data-modal-target="static-modal" data-modal-toggle="static-modal"
+            class="font-bold text-2xl text-Pink border-Pink border-2 flex justify-center items-center gap-5 px-3 rounded-md py-2">
+            <span class="">
+                <i
+                    class="fa-solid fa-plus text-white text-center flex justify-center items-center bg-Pink rounded-full text-lg w-5 h-5"></i>
+            </span>
+            <span class="text-lg"> Add New</span>
+        </div>
+    </div>
+
+    <!-- adress  -->
+    <div class="flex flex-col my-10 mx-10">
+        <div class="-m-1.5 overflow-x-auto">
+            <div class="p-1.5 min-w-full inline-block align-middle">
+                <div class="overflow-hidden">
+                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="px-6 text-bold py-3 text-left text-xs uppercase">
+                                    Name
+                                </th>
+                                <th scope="col" class="px-6 text-bold py-3 text-left text-xs uppercase">
+                                    Age
+                                </th>
+                                <th scope="col" class="px-6 text-bold py-3 text-left text-xs uppercase">
+                                    Address
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-right text-xs uppercase">
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                            <tr>
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
+                                    Lalit yadav
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
+                                    45
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
+                                    New Bhopal New Market
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <a class="text-blue-500 hover:text-Pink" href="#"><i
+                                            class="fa-solid fa-trash-can text-red-700"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add new Adress   -->
+
+    <!-- Main modal -->
+    <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Your Address
+                    </h3>
+                    <button type="button"
+                        class="text-Pink rounded-full border-2 border-Pink bg-transparent text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="static-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-6 space-y-6 shadow-2xl my-5">
+                    <div>
+                        <form>
+                            <label for="default-search"
+                                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                    </svg>
+                                </div>
+                                <input type="search" id="default-search"
+                                    class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Search LOcation , " required />
+                                <button type="submit"
+                                    class="text-white absolute right-2.5 bottom-2.5 bg-Pink hover:bg-Pink focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-Pink dark:focus:ring-blue-800">
+                                    <span class="">
+                                        <i
+                                            class="fa-solid fa-plus text-white text-center flex justify-center items-center bg-Pink rounded-full text-lg w-5 h-5"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- location  -->
+                    <div class="flex justify-center">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7360.267406362721!2d75.9170995!3d22.7232713!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39630396f8f29591%3A0x89941c1df2cc0c2e!2sCerbosys%20Technologies%20%7C%20Mobile%20%26%20Web%20App%20Development%2C%20Digital%20Marketing%20%26%20Staff%20Augmentation%20Company!5e0!3m2!1sen!2sin!4v1697693843714!5m2!1sen!2sin"
+                            style="border: 0" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-52 rounded-md"></iframe>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="default-input"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apartment & Flat
+                            No</label>
+                        <input type="text" id="default-input"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="default-input"
+                            class="block mb-2 text-lg font-bold text-gray-900 dark:text-white">Add Label</label>
+                        <button type="button"
+                            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                            Work
+                        </button>
+                        <button type="button"
+                            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                            <span><i class="fa-solid fa-briefcase"></i></span> Work
+                        </button>
+                        <button type="button"
+                            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                            Other
+                        </button>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div
+                    class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 justify-center">
+                    <button data-modal-hide="static-modal" type="button"
+                        class="text-white bg-Pink hover:bg-Pink focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 text-center dark:bg-blue-600 dark:hover:bg-Pink dark:focus:ring-blue-800 px-10">
+                        Confirm Location
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

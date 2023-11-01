@@ -27,6 +27,9 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ChatComponent } from './chat/chat.component';
 import { initFlowbite } from 'flowbite';
 import { OnInit } from '@angular/core';
+
+import { AddressComponent } from './Address/address/address.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,12 +54,16 @@ import { OnInit } from '@angular/core';
     MyordersComponent,
     EditProfileComponent,
     ChatComponent,
+    AddressComponent,
+    ChangepasswordComponent,
+    
    
   ],
   imports: [
     FontAwesomeModule,
     BrowserModule,
     AppRoutingModule,
+  
     
    
     

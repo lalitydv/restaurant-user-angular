@@ -18,6 +18,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { MyordersComponent } from './myorders/myorders.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ChatComponent } from './chat/chat.component';
+import { AddressComponent } from './Address/address/address.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 const routes: Routes = [
   {
@@ -87,6 +89,14 @@ const routes: Routes = [
   {
     path: 'editprofile' ,
     component: EditProfileComponent
+  },
+  {
+    path: 'address' ,
+    component: AddressComponent
+  },
+  {
+    path: 'changepassword' ,
+    component: ChangepasswordComponent
   },
   {
     path: 'contact' ,
