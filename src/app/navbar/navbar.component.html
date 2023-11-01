@@ -82,15 +82,24 @@
       </a>
 
     </div>
-    <a class="hidden lg:inline-block py-2 px-6 bg-Pink hover:Pink text-sm text-white font-bold rounded-xl transition duration-200"
-      href="login">
+
+    <a
+      class="hidden lg:inline-block py-2 px-6 bg-Pink hover:Pink text-sm text-white font-bold rounded-xl transition duration-200">
       <span class="flex justify-center items-center gap-2">
         <span>
-          <img src="../../assets/Home/profil.png" alt="" class="w-6 h-6 object-cover" /></span>
+          <button type="button"
+            class="flex mr-3  text-sm bg-Pink rounded-full md:mr-0 focus:ring-4 focus:ring-Pink dark:focus:ring-Pink"
+            id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+            data-dropdown-placement="bottom">
+            <span class="sr-only">Open user menu</span>
+            <img class="w-6 h-6 object-cover" src="../../assets/Home/profil.png" alt="user photo">
+          </button>
+        </span>
 
-        <span>Sign up</span>
+        <a href="login"> <span>Sign up</span></a>
       </span>
     </a>
+
 
 
   </nav>
@@ -296,6 +305,54 @@
       </div>
     </div>
 
+  </div>
+
+
+  <!-- profil start  -->
+
+  <!-- Dropdown menu -->
+  <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow md:w-96
+   dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+    <div class="px-4 py-3 flex justify-center items-center flex-col">
+      <span class="block"><img
+          src="https://images.pexels.com/photos/5378700/pexels-photo-5378700.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="" class=" rounded-full w-20 h-20"> </span>
+      <span class="block text-sm text-gray-900 dark:text-white text-xl">Lali yadav </span>
+      <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">lalit@flowbite.com</span>
+      <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">98756567859</span>
+      <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">$2.00</span>
+    </div>
+    <ul class="py-2" aria-labelledby="user-menu-button">
+      <li>
+        <a href="myorder"
+          class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+          <span><i class="fa-solid fa-cart-shopping mx-5 "></i></span> My Orders</a>
+      </li>
+      <li>
+        <a href="editprofile"
+          class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+
+          <span><i class="fa-regular fa-pen-to-square mx-5"></i></span> Edit
+          Profile</a>
+      </li>
+      <li>
+        <a href="chat" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200
+           dark:hover:text-white"> <span><i class="fa-regular fa-message mx-5"></i></span> Chat</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200
+           dark:hover:text-white"><span><i class="fa-regular fa-address-card mx-5"></i></span> Address</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200
+           dark:hover:text-white"><span><i class="fa-solid fa-lock mx-5"></i></span> Change Password</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600
+           dark:text-gray-200 dark:hover:text-white"><span><i class="fa-solid fa-right-from-bracket mx-5"></i></span>
+          Logout</a>
+      </li>
+    </ul>
   </div>
 
 </div>
