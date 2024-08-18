@@ -20,6 +20,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ChatComponent } from './chat/chat.component';
 import { AddressComponent } from './Address/address/address.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { ProfileMainComponent } from './Profile-dashboard/profile-main/profile-main.component';
 
 const routes: Routes = [
   {
@@ -106,6 +107,10 @@ const routes: Routes = [
   {
     path: 'Policy' ,
     component: PolicyComponent
+  },
+  {
+    path: 'profile-main' ,
+    component: ProfileMainComponent
   },
 ];
 

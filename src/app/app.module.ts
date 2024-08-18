@@ -30,6 +30,7 @@ import { OnInit } from '@angular/core';
 
 import { AddressComponent } from './Address/address/address.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { ProfileMainComponent } from './Profile-dashboard/profile-main/profile-main.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
     ChatComponent,
     AddressComponent,
     ChangepasswordComponent,
+    ProfileMainComponent,
     
    
   ],
