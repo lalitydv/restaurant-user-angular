@@ -31,6 +31,10 @@ import { OnInit } from '@angular/core';
 import { AddressComponent } from './Address/address/address.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ProfileMainComponent } from './Profile-dashboard/profile-main/profile-main.component';
+import { MyProfileComponent } from './Profile-dashboard/my-profile/my-profile.component';
+import { MyProfileSecondComponent } from './Profile-dashboard/my-profile/my-profile-second/my-profile-second.component';
+import { OrderSummaryComponent } from './Profile-dashboard/order-summary/order-summary.component';
+import { OrdersSecndComponent } from './Profile-dashboard/order-summary/orders-secnd/orders-secnd.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +62,10 @@ import { ProfileMainComponent } from './Profile-dashboard/profile-main/profile-m
     AddressComponent,
     ChangepasswordComponent,
     ProfileMainComponent,
+    MyProfileComponent,
+    MyProfileSecondComponent,
+    OrderSummaryComponent,
+    OrdersSecndComponent,
     
    
   ],

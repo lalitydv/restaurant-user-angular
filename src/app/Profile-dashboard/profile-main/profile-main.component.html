@@ -1,149 +1,158 @@
-<div class="flex flex-col md:flex-row h-screen">
+<div class="flex flex-col md:flex-row w-[100%] px-5">
     <!-- Tab Navigation -->
-    <div class="md:w-1/4 bg-gray-100 p-5 flex flex-col md:items-start items-center">
-        <div class="text-center md:text-left mb-4">
-            <img src="https://via.placeholder.com/100" alt="Profile Picture" class="rounded-full mx-auto">
-            <h3 class="text-xl font-semibold mt-2">Rohit Sharma</h3>
-            <p class="text-sm text-gray-600">+91 9876543212</p>
-            <p class="text-sm text-gray-600">Joined Jun 21st 24</p>
+    <div class="md:w-[20%] gap-5   p-5 flex flex-col md:items-start items-center">
+
+        <div class="bg-white shado  rounded-md  p-5">
+
+            <div class="text-center flex justify-start items-center  mb-4 w-full">
+                <img src="https://i.pinimg.com/564x/d0/cb/d1/d0cbd1380c72ddf3750c896433b2dea1.jpg" alt="Profile Picture"
+                    class="rounded-full w-16 h-16 object-cover ">
+                <div class="flex flex-col justify-start">
+                    <h3 class="text-xl font-semibold mt-2">Rohit Sharma</h3>
+                    <small class=" text-gray-600">91 9876543212</small>
+                    <p class="text-sm text-gray-600">Joined Jun 21st 24</p>
+                </div>
+            </div>
+
+            <nav class="space-y-2  w-full">
+                <div class="flex justify-center items-center flex-col ">
+                    <button (click)="selectedTab = 'profile'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'profile'}">
+                        <i class="fas fa-user"></i>
+                        <span>My Profile</span>
+                    </button>
+                    <button (click)="selectedTab = 'orders'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'orders'}">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </button>
+                    <button (click)="selectedTab = 'coupons'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'coupons'}">
+                        <i class="fas fa-tag"></i>
+                        <span>Coupons</span>
+                    </button>
+                    <button (click)="selectedTab = 'wishlist'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'wishlist'}">
+                        <i class="far fa-heart"></i>
+                        <span>Wishlist</span>
+                    </button>
+                    <button (click)="selectedTab = 'wallets'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'wallets'}">
+                        <i class="fas fa-wallet"></i>
+                        <span>Wallets</span>
+                    </button>
+                    <button (click)="selectedTab = 'loyalty'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'loyalty'}">
+                        <i class="fas fa-certificate"></i>
+                        <span>Loyalty Points</span>
+                    </button>
+                    <button (click)="selectedTab = 'referral'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'referral'}">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Referral Code</span>
+                    </button>
+                    <button (click)="selectedTab = 'reservation'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'reservation'}">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Reservation</span>
+                    </button>
+                    <button (click)="selectedTab = 'inbox'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'inbox'}">
+                        <i class="fas fa-inbox"></i>
+                        <span>Inbox</span>
+                    </button>
+                    <button (click)="selectedTab = 'settings'"
+                        class="w-full text-center p-2 flex gap-2 items-center justify-start rounded-md"
+                        [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'settings'}">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </button>
+                </div>
+            </nav>
         </div>
-        <nav class="space-y-2 w-full">
-            <button (click)="selectedTab = 'profile'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'profile'}">
-                <span class="material-icons mr-2">person</span> My Profile
-            </button>
-            <button (click)="selectedTab = 'orders'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'orders'}">
-                <span class="material-icons mr-2">shopping_cart</span> Orders
-            </button>
-            <button (click)="selectedTab = 'coupons'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'coupons'}">
-                <span class="material-icons mr-2">local_offer</span> Coupons
-            </button>
-            <button (click)="selectedTab = 'wishlist'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'wishlist'}">
-                <span class="material-icons mr-2">favorite_border</span> Wishlist
-            </button>
-            <button (click)="selectedTab = 'wallets'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'wallets'}">
-                <span class="material-icons mr-2">account_balance_wallet</span> Wallets
-            </button>
-            <button (click)="selectedTab = 'loyalty'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'loyalty'}">
-                <span class="material-icons mr-2">loyalty</span> Loyalty Points
-            </button>
-            <button (click)="selectedTab = 'referral'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'referral'}">
-                <span class="material-icons mr-2">share</span> Referral Code
-            </button>
-            <button (click)="selectedTab = 'reservation'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'reservation'}">
-                <span class="material-icons mr-2">event</span> Reservation
-            </button>
-            <button (click)="selectedTab = 'inbox'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'inbox'}">
-                <span class="material-icons mr-2">inbox</span> Inbox
-            </button>
-            <button (click)="selectedTab = 'settings'"
-                class="w-full text-left p-2 flex items-center justify-center md:justify-start rounded-md"
-                [ngClass]="{'bg-pink-100 text-pink-500': selectedTab === 'settings'}">
-                <span class="material-icons mr-2">settings</span> Settings
-            </button>
-        </nav>
+
+
     </div>
 
     <!-- Content Area -->
-    <div class="md:w-3/4 bg-white p-5 md:p-10">
-        <!-- My Profile Content -->
-        <div *ngIf="selectedTab === 'profile'">
-            <h2 class="text-2xl font-semibold mb-6">Personal Details</h2>
-            <form class="space-y-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block mb-2">First Name</label>
-                        <input type="text" class="w-full border rounded-md p-2">
-                    </div>
-                    <div>
-                        <label class="block mb-2">Last Name</label>
-                        <input type="text" class="w-full border rounded-md p-2">
-                    </div>
-                    <div>
-                        <label class="block mb-2">Phone</label>
-                        <input type="text" class="w-full border rounded-md p-2">
-                    </div>
-                    <div>
-                        <label class="block mb-2">Email</label>
-                        <input type="email" class="w-full border rounded-md p-2">
-                    </div>
-                </div>
-                <div class="flex space-x-4">
-                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md">Update</button>
-                    <button type="reset" class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md">Reset</button>
-                </div>
-            </form>
-        </div>
 
-        <!-- Orders Content -->
-        <div *ngIf="selectedTab === 'orders'">
-            <h2 class="text-2xl font-semibold mb-6">Orders</h2>
-            <!-- Orders content goes here -->
-        </div>
 
-        <!-- Coupons Content -->
-        <div *ngIf="selectedTab === 'coupons'">
-            <h2 class="text-2xl font-semibold mb-6">Coupons</h2>
-            <!-- Coupons content goes here -->
-        </div>
+    <div class="md:w-[80%]  p-5  space-y-2 ">
+        <div class="bg-white shado p-5 rounded-md ">
 
-        <!-- Wishlist Content -->
-        <div *ngIf="selectedTab === 'wishlist'">
-            <h2 class="text-2xl font-semibold mb-6">Wishlist</h2>
-            <!-- Wishlist content goes here -->
-        </div>
 
-        <!-- Wallets Content -->
-        <div *ngIf="selectedTab === 'wallets'">
-            <h2 class="text-2xl font-semibold mb-6">Wallets</h2>
-            <!-- Wallets content goes here -->
-        </div>
+            <!-- My Profile Content -->
+            <div *ngIf="selectedTab === 'profile'">
+                <!-- <h2 class="text-2xl font-semibold mb-6">Personal Details</h2> -->
+                <app-my-profile-second></app-my-profile-second>
+                <!-- <app-my-profile></app-my-profile> -->
+            </div>
 
-        <!-- Loyalty Points Content -->
-        <div *ngIf="selectedTab === 'loyalty'">
-            <h2 class="text-2xl font-semibold mb-6">Loyalty Points</h2>
-            <!-- Loyalty Points content goes here -->
-        </div>
+            <!-- Orders Content -->
+            <div *ngIf="selectedTab === 'orders'">
+                <!-- <h2 class="text-2xl font-semibold mb-6">Orders</h2> -->
+                <!-- Orders content goes here -->
+                <app-order-summary></app-order-summary>
+            </div>
 
-        <!-- Referral Code Content -->
-        <div *ngIf="selectedTab === 'referral'">
-            <h2 class="text-2xl font-semibold mb-6">Referral Code</h2>
-            <!-- Referral Code content goes here -->
-        </div>
+            <!-- Coupons Content -->
+            <div *ngIf="selectedTab === 'coupons'">
+                <h2 class="text-2xl font-semibold mb-6">Coupons</h2>
+                <!-- Coupons content goes here -->
+            </div>
 
-        <!-- Reservation Content -->
-        <div *ngIf="selectedTab === 'reservation'">
-            <h2 class="text-2xl font-semibold mb-6">Reservation</h2>
-            <!-- Reservation content goes here -->
-        </div>
+            <!-- Wishlist Content -->
+            <div *ngIf="selectedTab === 'wishlist'">
+                <h2 class="text-2xl font-semibold mb-6">Wishlist</h2>
+                <!-- Wishlist content goes here -->
+            </div>
 
-        <!-- Inbox Content -->
-        <div *ngIf="selectedTab === 'inbox'">
-            <h2 class="text-2xl font-semibold mb-6">Inbox</h2>
-            <!-- Inbox content goes here -->
-        </div>
+            <!-- Wallets Content -->
+            <div *ngIf="selectedTab === 'wallets'">
+                <h2 class="text-2xl font-semibold mb-6">Wallets</h2>
+                <!-- Wallets content goes here -->
+            </div>
 
-        <!-- Settings Content -->
-        <div *ngIf="selectedTab === 'settings'">
-            <h2 class="text-2xl font-semibold mb-6">Settings</h2>
-            <!-- Settings content goes here -->
+            <!-- Loyalty Points Content -->
+            <div *ngIf="selectedTab === 'loyalty'">
+                <h2 class="text-2xl font-semibold mb-6">Loyalty Points</h2>
+                <!-- Loyalty Points content goes here -->
+            </div>
+
+            <!-- Referral Code Content -->
+            <div *ngIf="selectedTab === 'referral'">
+                <h2 class="text-2xl font-semibold mb-6">Referral Code</h2>
+                <!-- Referral Code content goes here -->
+            </div>
+
+            <!-- Reservation Content -->
+            <div *ngIf="selectedTab === 'reservation'">
+                <h2 class="text-2xl font-semibold mb-6">Reservation</h2>
+                <!-- Reservation content goes here -->
+            </div>
+
+            <!-- Inbox Content -->
+            <div *ngIf="selectedTab === 'inbox'">
+                <h2 class="text-2xl font-semibold mb-6">Inbox</h2>
+                <!-- Inbox content goes here -->
+            </div>
+
+            <!-- Settings Content -->
+            <div *ngIf="selectedTab === 'settings'">
+                <h2 class="text-2xl font-semibold mb-6">Settings</h2>
+                <!-- Settings content goes here -->
+            </div>
+
         </div>
     </div>
+
 </div>

@@ -48,3 +48,6 @@ select.font-bold.appearance-none.bg-transparent {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+.shado{
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}

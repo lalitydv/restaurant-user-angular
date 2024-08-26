@@ -21,96 +21,103 @@ import { ChatComponent } from './chat/chat.component';
 import { AddressComponent } from './Address/address/address.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ProfileMainComponent } from './Profile-dashboard/profile-main/profile-main.component';
+import { MyProfileComponent } from './Profile-dashboard/my-profile/my-profile.component';
 
 const routes: Routes = [
   {
-    path: '' ,
+    path: '',
     component: HomeComponent
   },
   {
-    path: 'login' ,
+    path: 'login',
     component: LoginComponent
   },
   {
-    path: 'signup' ,
+    path: 'signup',
     component: SignupComponent
   },
   {
-    path: 'forgotPassword' ,
+    path: 'forgotPassword',
     component: ForgotPasswordComponent
   },
   {
-    path: 'afterente' ,
+    path: 'afterente',
     component: AfterenteComponent
   },
   {
-    path: 'offer' ,
+    path: 'offer',
     component: OfferComponent
   },
   {
-    path: 'about' ,
+    path: 'about',
     component: AboutComponent
   },
   {
-    path: 'menu' ,
+    path: 'menu',
     component: MenuComponent
   },
   {
-    path: 'reservation' ,
+    path: 'reservation',
     component: ReservationComponent
   },
   {
-    path: 'upliftingordernow' ,
+    path: 'upliftingordernow',
     component: UpliftingordernowComponent
   },
   {
-    path: 'savoryandsatisfying' ,
+    path: 'savoryandsatisfying',
     component: SavoryandsatisfyingComponent
   },
   {
-    path: 'zoomicon' ,
+    path: 'zoomicon',
     component: ZoomiconComponent
   },
   {
-    path: 'checkout' ,
+    path: 'checkout',
     component: CheckoutComponent
   },
   {
-    path: 'myorder' ,
+    path: 'myorder',
     component: MyordersComponent
   },
   {
-    path: 'editprofile' ,
+    path: 'editprofile',
     component: EditProfileComponent
   },
   {
-    path: 'chat' ,
+    path: 'chat',
     component: ChatComponent
   },
   {
-    path: 'editprofile' ,
+    path: 'editprofile',
     component: EditProfileComponent
   },
   {
-    path: 'address' ,
+    path: 'address',
     component: AddressComponent
   },
   {
-    path: 'changepassword' ,
+    path: 'changepassword',
     component: ChangepasswordComponent
   },
   {
-    path: 'contact' ,
+    path: 'contact',
     component: ContactComponent
   },
- 
+
   {
-    path: 'Policy' ,
+    path: 'Policy',
     component: PolicyComponent
   },
   {
-    path: 'profile-main' ,
-    component: ProfileMainComponent
+    path: 'profile-main',
+    component: ProfileMainComponent,
+    children: [
+      {
+        path: 'edit',
+        component: MyProfileComponent
+      }
+    ]
   },
 ];
 

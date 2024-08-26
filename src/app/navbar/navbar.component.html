@@ -1,7 +1,7 @@
 <div class="-10">
-  <nav class="fixed z-50 top-0 w-full px-4 py-4 flex justify-between items-center shadow-2xl bg-white">
+  <nav class="fixed z-50 top-0 w-full px-4 py-4 flex justify-between items-center shado bg-white">
     <div class="flex justify-center items-center gap-5">
-      <a class="text-3xl font-bold leading-none" href="/">
+      <a class="text-3xl font-bold leading-none" routerLink="/">
         <img src="../../assets//logo.png" alt="image" class="object-contain w-20" />
       </a>
       <div>|</div>
@@ -24,15 +24,15 @@
     <ul
       class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2  lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
       <li>
-        <a class="text-sm  font-bold fill-Pink hover:text-Pink hover:underline active:text-Pink " href="/">Home</a>
+        <a class="text-sm  font-bold fill-Pink hover:text-Pink hover:underline active:text-Pink " routerLink="/">Home</a>
       </li>
 
       <li><a class="text-sm font-bold active:text-Pink fill-Pink hover:text-Pink hover:underline "
-          href="reservation">Reservation</a></li>
+          routerLink="reservation">Reservation</a></li>
 
-      <li><a class="text-sm font-bold fill-Pink hover:text-Pink hover:underline" href="menu">Menu</a></li>
+      <li><a class="text-sm font-bold fill-Pink hover:text-Pink hover:underline" routerLink="menu">Menu</a></li>
 
-      <li><a class="text-sm font-bold fill-Pink hover:text-Pink hover:underline" href="offer">Offers</a></li>
+      <li><a class="text-sm font-bold fill-Pink hover:text-Pink hover:underline" routerLink="offer">Offers</a></li>
 
       <li>
         <!-- search button start -->
@@ -63,7 +63,7 @@
       </li>
     </ul>
     <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
-      href="#">
+      routerLink="#">
       <div class="flex flex-col rounded-xl bg-white shadow-xl  px-5 focus:outline-none  border-2 border-Pink">
         <select class="font-bold bg-transparent focus:outline-none border-0 focus:border-0">
 
@@ -75,7 +75,7 @@
     </a>
     <div>
       <!-- (click)="toggleDrawer() -->
-      <!-- href="checkout" -->
+      <!-- routerLink="checkout" -->
       <a data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example" data-drawer-placement="right"
         aria-controls="drawer-right-example" class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-2 text-sm text-gray-900 flex flex-col rounded-xl bg-white shadow-xl p-3 
         focus:outline-none border-2 border-Pink font-bold transition duration-200">
@@ -96,7 +96,7 @@
           </button>
         </span>
 
-        <a href="login"> <span>Sign up</span></a>
+        <a routerLink="login"> <span>Sign up</span></a>
       </span>
     </a>
   </nav>
@@ -105,7 +105,7 @@
     <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
     <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
       <div class="flex items-center mb-8">
-        <a class="mr-auto text-3xl font-bold leading-none" href="/">
+        <a class="mr-auto text-3xl font-bold leading-none" routerLink="/">
           <img src="../../assets/logo.png" alt="image" class="object-contain w-20" />
         </a>
         <button class="navbar-close">
@@ -119,28 +119,28 @@
         <ul>
           <li class="mb-1">
             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-Pink rounded"
-              href="/">Home</a>
+              routerLink="/">Home</a>
           </li>
           <li class="mb-1">
             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-Pink rounded"
-              href="reservation">Reservation</a>
+              routerLink="reservation">Reservation</a>
           </li>
           <li class="mb-1">
             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-Pink rounded"
-              href="menu">Menu</a>
+              routerLink="menu">Menu</a>
           </li>
           <li class="mb-1">
             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-Pink rounded"
-              href="offer">Offer</a>
+              routerLink="offer">Offer</a>
           </li>
         </ul>
       </div>
       <div class="mt-auto">
         <div class="pt-6">
           <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
-            href="login">Log in</a>
+            routerLink="login">Log in</a>
           <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-Pink hover:bg-Pink rounded-xl"
-            href="signup">Sign Up</a>
+            routerLink="signup">Sign Up</a>
         </div>
         <p class="my-4 text-xs text-center text-gray-400">
           <span>Copyright © 2023</span>
@@ -293,7 +293,7 @@
         </div>
         <div class=" justify-center flex items-center">
 
-          <a href="checkout">
+          <a routerLink="checkout">
             <button class="my-10  rounded-md bg-Pink hover:bg-pink-700 text-white font-bold py-2 px-10 border border-pink-700
       w-fit ">
               Proceed to Checkout
@@ -314,33 +314,33 @@
           src="https://images.pexels.com/photos/5378700/pexels-photo-5378700.jpeg?auto=compress&cs=tinysrgb&w=600"
           alt="" class=" rounded-full w-20 h-20"> </span>
       <span class="block text-sm text-gray-900 dark:text-white text-xl">Shine Coder </span>
-      <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">shinecoder01@gmail.com</span>
+      <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">shinecoder01gmail.com</span>
       <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">+919 480-555-553</span>
       <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">$2.00</span>
     </div>
     <ul class="py-2" aria-labelledby="user-menu-button">
       <li>
-        <a href="myorder"
+        <a routerLink="myorder"
           class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
           <span><i class="fa-solid fa-cart-shopping mx-5 "></i></span> My Orders</a>
       </li>
       <li>
-        <a href="editprofile"
+        <a routerLink="editprofile"
           class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
 
           <span><i class="fa-regular fa-pen-to-square mx-5"></i></span> Edit
           Profile</a>
       </li>
       <li>
-        <a href="chat" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200
+        <a routerLink="chat" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200
            dark:hover:text-white"> <span><i class="fa-regular fa-message mx-5"></i></span> Chat</a>
       </li>
       <li>
-        <a href="address" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200
+        <a routerLink="address" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200
            dark:hover:text-white"><span><i class="fa-regular fa-address-card mx-5"></i></span> Address</a>
       </li>
       <li>
-        <a href="changepassword" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200
+        <a routerLink="changepassword" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200
            dark:hover:text-white"><span><i class="fa-solid fa-lock mx-5"></i></span> Change Password</a>
       </li>
       <li>
@@ -375,7 +375,7 @@
               d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
           </svg>
           <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to Logout</h3>
-          <a href="login"> <button data-modal-hide="popup-modal" type="button"
+          <a routerLink="login"> <button data-modal-hide="popup-modal" type="button"
               class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
               Yes, I'm sure
             </button></a>
