@@ -1,0 +1,175 @@
+<div *ngIf="!showEditProfile" class="flex md:flex-row flex-col">
+    <!-- Sidebar -->
+
+    <div class="md:w-1/4 w-full bg-Gray h-screen p-4 border-r-2 border-Pink ">
+        <h3 class="text-lg font-bold">Message</h3>
+        <div class="flex justify-start items-center mb-4">
+            <div class="border-b-2 border-Pink w-16"></div>
+            <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
+        </div>
+        <div>
+            <div class="pt-2 relative mx-auto text-gray-600 my-5">
+                <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                    type="search" name="search" placeholder="Search">
+                <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+                    <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                        viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                        xml:space="preserve" width="512px" height="512px">
+                        <path
+                            d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div>
+            <ul class="flex  justify-between">
+                <li class="border-r-2 px-1" (click)="selectTab('Seller')"
+                    [ngClass]="{'text-Pink': selectedTab === 'Seller'}">Seller
+                    <div class="flex justify-start items-center mb-4">
+                        <div class="border-b-2 border-Pink w-10"></div>
+                        <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
+                    </div>
+                </li>
+
+                <li class="border-r-2 px-1" (click)="selectTab('Delivery Man')"
+                    [ngClass]="{'text-Pink': selectedTab === 'Delivery Man'}">
+                    Delivery Man</li>
+                <li (click)="selectTab('Admin')" [ngClass]="{'text-Pink': selectedTab === 'Admin'}">Admin</li>
+            </ul>
+        </div>
+        <!-- (click)="showChat()" -->
+        <div *ngIf="selectedTab === 'Seller'" class="flex justify-center items-center">
+            <button (click)="toggleEditProfile()" class="bg-Pink text-white p-2 mt-4 rounded-md"><i
+                    class="fa-solid fa-message px-5"></i>Chat
+                with seller</button>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="md:w-3/4 w-full h-screen  p-4">
+        <div *ngIf="!isChatVisible">
+            <div class="flex flex-col justify-center items-center h-screen">
+                <i class="fa-regular fa-message text-3xl"></i>
+                <p class="text-center h-full">Select and start messaging!</p>
+            </div>
+
+        </div>
+        <div *ngIf="isChatVisible">
+            <div class="flex flex-col ">
+                <div class="flex-grow p-4">
+                    <!-- Message content -->
+                    <div *ngFor="let message of messages">
+                        <div class="mb-2">
+                            <div class="text-Pink bg-LightPink p-2 rounded inline-block">
+                                {{ message }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input area -->
+                <div class="p-4 border-t">
+                    <!-- <input [(ngModel)]="newMessage" placeholder="Start a New Message" class="w-full p-2 border rounded"/> -->
+                    <button (click)="sendMessage()" class="bg-Pink text-white p-2 mt-2">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- second div  -->
+<div *ngIf="showEditProfile" class="flex h-screenflex md:flex-row flex-col">
+    <!-- Sidebar -->
+    <div class="md:w-1/4 w-full bg-Gray h-screen p-4 border-r-2 border-Pink">
+        <div>
+            <h3 class="text-lg font-bold">Message</h3>
+            <div class="flex justify-start items-center mb-4">
+                <div class="border-b-2 border-Pink w-16"></div>
+                <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
+            </div>
+            <div>
+                <div class="pt-2 relative mx-auto text-gray-600 my-5">
+                    <input
+                        class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                        type="search" name="search" placeholder="Search">
+                    <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+                        <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                            viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <path
+                                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <ul class="flex  justify-between">
+                    <li class="border-r-2 px-1" (click)="selectTab('Seller')"
+                        [ngClass]="{'text-Pink': selectedTab === 'Seller'}">Seller
+                        <div class="flex justify-start items-center mb-4">
+                            <div class="border-b-2 border-Pink w-10"></div>
+                            <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
+                        </div>
+                    </li>
+
+                    <li class="border-r-2 px-1" (click)="selectTab('Delivery Man')"
+                        [ngClass]="{'text-Pink': selectedTab === 'Delivery Man'}">
+                        Delivery Man</li>
+                    <li (click)="selectTab('Admin')" [ngClass]="{'text-Pink': selectedTab === 'Admin'}">Admin</li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="flex items-center p-2 mb-4 bg-LightPink rounded">
+                    <img src="https://cdn.vectorstock.com/i/500p/52/38/avatar-icon-vector-11835238.jpg" alt="Avatar"
+                        class="w-10 h-10 rounded-full mr-2" />
+                    <div>
+                        <p class="font-bold">Rohit Sharma</p>
+                        <p class="text-xs">Hii!</p>
+                        <p class="text-xs text-gray-500">11th Aug</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Content -->
+    <div class="md:w-3/4 w-full h-screen  bg-white p-4 flex flex-col">
+        <div class="flex items-center border-b pb-2 mb-4">
+            <img src="https://cdn.vectorstock.com/i/500p/52/38/avatar-icon-vector-11835238.jpg" alt="Avatar"
+                class="w-10 h-10 rounded-full mr-2" />
+            <div>
+                <p class="font-bold">Rohit Sharma</p>
+                <p class="text-xs text-green-500">online</p>
+            </div>
+        </div>
+
+        <div class="flex-grow p-4">
+            <div class="flex flex-col justify-end  mb-4 ">
+                <div class="flex justify-end mb-4 items-center">
+                    <div class="bg-LightPink text-Pink p-2 rounded">
+                        Hii! How are you
+                    </div>
+
+                    <img src="https://cdn.vectorstock.com/i/500p/52/38/avatar-icon-vector-11835238.jpg" alt="Avatar"
+                        class="w-10 h-10 rounded-full mr-2" />
+                </div>
+                <small class="flex justify-end text-xs px-10">
+                    20-5-20223
+                </small>
+
+
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="flex items-center border-t pt-4">
+            <button class="mr-2"><i class="fas fa-camera"></i></button>
+            <button class="mr-2"><i class="fas fa-gift"></i></button>
+            <input type="text" placeholder="Start a New Message" class="w-full p-2 border rounded mr-2" />
+            <button class="bg-Pink text-white p-2 rounded"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>

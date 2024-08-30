@@ -6,5 +6,97 @@ import { Component } from '@angular/core';
   styleUrls: ['./order-summary.component.css']
 })
 export class OrderSummaryComponent {
+  // showFirstDiv: boolean = true;
+  // showTrackerDiv: boolean = false;
+  // showThirdDiv: boolean = false;
 
+  // Toggle to show Tracker div
+  // toggleTracker() {
+  //   this.showFirstDiv = false;
+  //   this.showTrackerDiv = true;
+  //   this.showThirdDiv = false;
+  // }
+
+  // Toggle to show Third div
+  // toggleThirdDiv() {
+  //   this.showFirstDiv = false;
+  //   this.showTrackerDiv = false;
+  //   this.showThirdDiv = true;
+  // }
+
+  // Close all divs (if you need this functionality)
+  // closeAll() {
+  //   this.showFirstDiv = false;
+  //   this.showTrackerDiv = false;
+  //   this.showThirdDiv = false;
+  // }
+
+
+  showEditProfile: boolean = false;
+  showThirdDiv: boolean = false;
+
+  toggleEditProfile() {
+    this.showEditProfile = !this.showEditProfile;
+    this.showThirdDiv = false; // Hide third div when toggling between first two divs
+  }
+
+  toggleThirdDiv() {
+    this.showThirdDiv = !this.showThirdDiv;
+    this.showEditProfile = false; // Hide second div when toggling third div
+  }
+
+
+  events = [
+    {
+      sn: '1',
+      description: 'Order placed',
+      date: new Date('2020-09-20'),
+
+    },
+    {
+      description: 'Order Confirmed',
+
+      date: new Date('2020-09-22'),
+      sn: '2',
+    },
+    {
+      description: 'Preparing Food',
+
+      date: new Date('2020-09-28'),
+      sn: '3',
+    },
+    {
+      description: 'Food is on the Way',
+
+      date: new Date('2020-09-30'),
+      sn: '4',
+    },
+    {
+      description: 'Delivered',
+
+      date: new Date('2020-10-04'),
+      sn: '5',
+    },
+  ];
+
+  selectedTab: string = 'Seller';
+  isChatVisible: boolean = false;
+  messages: string[] = ['Hii!'];
+  newMessage: string = '';
+
+  selectTab(tab: string) {
+    this.selectedTab = tab;
+    this.isChatVisible = false;
+  }
+
+  showChat() {
+    this.isChatVisible = true;
+  }
+
+  sendMessage() {
+    if (this.newMessage.trim()) {
+      this.messages.push(this.newMessage);
+      this.newMessage = '';
+    }
+  }
 }

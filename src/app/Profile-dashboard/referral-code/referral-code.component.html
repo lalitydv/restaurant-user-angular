@@ -1,0 +1,48 @@
+<div class="p-6 bg-white rounded-lg shado">
+    <!-- Referral Code Section -->
+    <div class="mb-6">
+
+        <h3 class="text-lg font-bold">Referral Code</h3>
+        <div class="flex justify-start items-center mb-4">
+            <div class="border-b-2 border-Pink w-16"></div>
+            <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
+        </div>
+        <div class="flex justify-center mb-4">
+            <img src="assets/refnd-code.png" alt="Referral Illustration" class="h-40" />
+        </div>
+        <p class="text-center text-gray-700 mb-4 font-bold text-2xl">
+            Refer your code to your friends and get <span class="text-Pink">$10.00</span> on joining for every referral!
+        </p>
+        <div class="flex justify-center items-center mb-6">
+            <input type="text" value="N8YAVG3UQJ" readonly
+                class="border border-gray-300 rounded-l-lg p-2 w-60 text-center" />
+            <button class="bg-gray-300 hover:bg-gray-400 text-gray-700 rounded-r-lg px-4 py-2"
+                (click)="copyToClipboard()">
+                <i class="fas fa-copy"></i>
+            </button>
+
+        </div>
+        <div class="text-center mb-6">
+            <p>OR SHARE</p>
+            <div class="flex justify-center mt-2 space-x-4">
+                <a href="#"><i class="fab fa-facebook text-blue-600 text-2xl"></i></a>
+                <a href="#"><i class="fab fa-instagram text-pink-500 text-2xl"></i></a>
+                <a href="#"><i class="fab fa-twitter text-blue-400 text-2xl"></i></a>
+                <a href="#"><i class="fab fa-linkedin text-blue-700 text-2xl"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- How it works Section -->
+    <div class="bg-Gray p-4 rounded-lg">
+        <div class="flex items-center mb-4">
+            <i class="fas fa-info-circle text-Pink text-xl mr-2"></i>
+            <h3 class="text-lg font-semibold">How it works?</h3>
+        </div>
+        <ol class="list-decimal pl-5 text-gray-700">
+            <li>Invite and share your code to your friends & family members.</li>
+            <li>They create an account on StackFood using your code and place their first order.</li>
+            <li>You earn your reward when the order is complete.</li>
+        </ol>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="p-6">
+    <!-- Header -->
+    <h3 class="text-lg font-bold">Loyalty Points</h3>
+    <div class="flex justify-start items-center mb-4">
+        <div class="border-b-2 border-Pink w-20"></div>
+        <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
+    </div>
+    <!-- Total Points and Instructions -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="flex items-center justify-between flex-wrap bg-LightPink p-4 rounded-lg relative">
+            <div class="bg-LightPink p-4 rounded-lg">
+                <img src="assets/pngtree-realistic-star-medal-award-design-png-image_6159112.png" alt="Star Icon"
+                    class="w-20 h-20 object-cover">
+            </div>
+            <div class="ml-4">
+
+                <h4
+                    class="text-3xl font-bold absolute -top-5 border-Pink border-2 -right-5 bg-LightPink rounded-full h-20 w-20 text-center shadow-2xl items-center flex justify-center">
+                    {{ totalPoints }}
+                </h4>
+
+                <p class="text-lg  font-semibold">Total Point</p>
+            </div>
+        </div>
+
+        <div class="bg-Gray p-4 rounded-lg">
+            <h4 class="text-xl font-bold">How to use</h4>
+            <ul class="list-disc pl-4 text-sm">
+                <li>Convert your loyalty points to wallet money.</li>
+                <li>Minimum 20 points required to convert into currency.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Points History -->
+    <h4 class="text-lg font-bold mt-6">Point History</h4>
+
+    <div *ngIf="pointsHistory.length === 0" class="text-center">
+        <img src="https://static.thenounproject.com/png/4143644-200.png" alt="No Data Found" class="w-20 h-20 mx-auto">
+        <p class="text-gray-500 mt-10">No Data Found</p>
+    </div>
+    <!-- Add more content for points history when available -->
+</div>

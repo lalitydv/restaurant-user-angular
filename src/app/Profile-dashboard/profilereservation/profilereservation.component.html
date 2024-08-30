@@ -1,0 +1,141 @@
+<div *ngIf="!showEditProfile" class="p-4">
+    <div class="flex justify-between flex-wrap items-center mb-4">
+        <div>
+            <h3 class="text-lg font-bold">Reservation</h3>
+            <div class="flex justify-start items-center mb-4">
+                <div class="border-b-2 border-Pink w-16"></div>
+                <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
+            </div>
+        </div>
+        <button (click)="toggleEditProfile()" class="bg-Pink text-white px-4 py-2 rounded-md">
+            + Add Reservation
+        </button>
+    </div>
+
+    <div class="overflow-x-auto rounded-lg shadow">
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-LightPink">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-blue uppercase tracking-wider">S.No.</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-blue uppercase tracking-wider">Date</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-blue uppercase tracking-wider">No. Of People
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-blue uppercase tracking-wider">Name</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-blue uppercase tracking-wider">Table Name
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                <tr *ngFor="let reservation of reservations; let i = index" [class.bg-Gray]="i % 2 !== 0">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ i + 1 }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ reservation.date }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ reservation.people }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ reservation.name }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ reservation.tableName }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div *ngIf="showEditProfile" class="p-6 bg-white shadow-md rounded-md">
+    <h2 class="text-lg font-bold mb-4">Add Reservation</h2>
+    <div class="flex justify-start items-center mb-4">
+        <div class="border-b-2 border-Pink w-20"></div>
+        <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
+    </div>
+
+    <form>
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-6 mb-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Select Table</label>
+                <select
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-Pink focus:border-Pink">
+                    <option>__Select__</option>
+                    <!-- Add other options here -->
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">No. of People</label>
+                <input type="number"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-Pink focus:border-Pink" />
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <input type="text"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-Pink focus:border-Pink" />
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-Pink focus:border-Pink" />
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Mobile</label>
+                <input type="tel"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-Pink focus:border-Pink" />
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                <div class="relative">
+                    <input type="date"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-Pink focus:border-Pink" />
+                    <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M6 2C6 1.44772 6.44772 1 7 1C7.55228 1 8 1.44772 8 2V3H12V2C12 1.44772 12.4477 1 13 1C13.5523 1 14 1.44772 14 2V3H15C15.5523 3 16 3.44772 16 4C16 4.55228 15.5523 5 15 5H5C4.44772 5 4 4.55228 4 4C4 3.44772 4.44772 3 5 3H6V2ZM5 7V15H15V7H5ZM3 7C2.44772 7 2 7.44772 2 8V16C2 16.5523 2.44772 17 3 17H17C17.5523 17 18 16.5523 18 16V8C18 7.44772 17.5523 7 17 7H3Z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Start At</label>
+                <div class="relative">
+                    <input type="time"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-Pink focus:border-Pink" />
+                    <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 2C10.5523 2 11 2.44772 11 3V10.5858L14.2929 13.8787C14.6834 14.2692 14.6834 14.9024 14.2929 15.2929C13.9024 15.6834 13.2692 15.6834 12.8787 15.2929L9 11.4142V3C9 2.44772 9.44772 2 10 2Z">
+                            </path>
+                            <path
+                                d="M10 19C15.5228 19 20 14.5228 20 9C20 3.47715 15.5228 -1 10 -1C4.47715 -1 0 3.47715 0 9C0 14.5228 4.47715 19 10 19Z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">End At</label>
+                <div class="relative">
+                    <input type="time"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-Pink focus:border-Pink" />
+                    <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 2C10.5523 2 11 2.44772 11 3V10.5858L14.2929 13.8787C14.6834 14.2692 14.6834 14.9024 14.2929 15.2929C13.9024 15.6834 13.2692 15.6834 12.8787 15.2929L9 11.4142V3C9 2.44772 9.44772 2 10 2Z">
+                            </path>
+                            <path
+                                d="M10 19C15.5228 19 20 14.5228 20 9C20 3.47715 15.5228 -1 10 -1C4.47715 -1 0 3.47715 0 9C0 14.5228 4.47715 19 10 19Z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-end">
+            <button type="button" class="bg-green-600 text-white px-4 py-2 rounded-md mr-2">Save</button>
+            <button type="button" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">Close</button>
+        </div>
+    </form>
+</div>

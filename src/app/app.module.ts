@@ -35,6 +35,14 @@ import { MyProfileComponent } from './Profile-dashboard/my-profile/my-profile.co
 import { MyProfileSecondComponent } from './Profile-dashboard/my-profile/my-profile-second/my-profile-second.component';
 import { OrderSummaryComponent } from './Profile-dashboard/order-summary/order-summary.component';
 import { OrdersSecndComponent } from './Profile-dashboard/order-summary/orders-secnd/orders-secnd.component';
+import { CouponsComponent } from './Profile-dashboard/coupons/coupons.component';
+import { LoyaltyPointsComponent } from './Profile-dashboard/loyalty-points/loyalty-points.component';
+import { WalletsComponent } from './Profile-dashboard/wallets/wallets.component';
+import { SettingComponent } from './Profile-dashboard/setting/setting.component';
+import { WishlistComponent } from './Profile-dashboard/wishlist/wishlist.component';
+import { InboxComponent } from './Profile-dashboard/inbox/inbox.component';
+import { ReferralCodeComponent } from './Profile-dashboard/referral-code/referral-code.component';
+import { ProfilereservationComponent } from './Profile-dashboard/profilereservation/profilereservation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +74,14 @@ import { OrdersSecndComponent } from './Profile-dashboard/order-summary/orders-s
     MyProfileSecondComponent,
     OrderSummaryComponent,
     OrdersSecndComponent,
+    CouponsComponent,
+    LoyaltyPointsComponent,
+    WalletsComponent,
+    SettingComponent,
+    WishlistComponent,
+    InboxComponent,
+    ReferralCodeComponent,
+    ProfilereservationComponent,
     
    
   ],

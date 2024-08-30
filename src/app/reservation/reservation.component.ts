@@ -4,6 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-reservation',
   templateUrl: './reservation.component.html',
   styleUrls: ['./reservation.component.css'],
-  
+
 })
-export class ReservationComponent {}
+export class ReservationComponent { }

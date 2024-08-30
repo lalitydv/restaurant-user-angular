@@ -1,0 +1,69 @@
+<div class="p-6">
+    <!-- Header -->
+    <h3 class="text-lg font-bold">Wallets</h3>
+    <div class="flex justify-start items-center mb-4">
+        <div class="border-b-2 border-Pink w-20"></div>
+        <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
+    </div>
+    <!-- Total Points and Instructions -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+
+
+
+        <div class=" bg-LightPink  p-4 rounded-lg">
+            <div class="flex items-center justify-between flex-wrap  relative">
+                <div class="bg-LightPink p-4 rounded-lg">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUAJE4w1pxq682JCNaYuVnSd5t0jjeVmmugygUNEpJB8Y5_C3elBZgInFQ36g7oNI4M28&usqp=CAU"
+                        alt="Star Icon" class="w-20 h-20 object-cover">
+
+                    <div>
+                        Total Balance
+                    </div>
+                </div>
+                <h4
+                    class="text-3xl font-bold absolute -top-5 border-Pink border-2 -right-5 bg-LightPink rounded-full h-32 w-32 text-center shadow-2xl items-center flex justify-center">
+                    {{ totalPoints }}
+                </h4>
+            </div>
+            <div class=" flex justify-between items-center flex-wrap px-5 py-5">
+
+
+
+                <i class="fa-solid fa-circle-info"></i>
+                <p class="text-lg  font-semibold bg-Pink text-white rounded-md p-1 ">Add Fund </p>
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="bg-Gray  p-4 rounded-2xl border-l-8 border-Pink flex justify-between items-center md:flex-row flex-col">
+            <div>
+                <h4 class="text-xl font-bold text-Pink">Add 100 get 10% Extras</h4>
+                <h4 class="text-xl font-bold text-Pink">Valid Till Jul 9, 2026 </h4>
+                <h4 class="text-lg font-bold">You have to add min 100 Fund to get max of 200 </h4>
+            </div>
+            <div class="">
+                <img src="assets/image 281.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Points History -->
+    <div class="flex justify-between items-center flex-wrap px-5 py-5">
+
+
+        <h4 class="text-lg font-bold mt-6">Wallet History</h4>
+        <Select class="p-2 rounded-md text-Pink border-Pink outline-none">
+            <option value="All Transaction">All Transaction</option>
+            <option value="All Transaction">All Transaction</option>
+        </Select>
+    </div>
+
+    <div *ngIf="pointsHistory.length === 0" class="text-center">
+        <img src="https://static.thenounproject.com/png/4143644-200.png" alt="No Data Found" class="w-20 h-20 mx-auto">
+        <p class="text-gray-500 mt-10">No Data Found</p>
+    </div>
+    <!-- Add more content for points history when available -->
+</div>
