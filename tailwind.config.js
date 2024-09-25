@@ -16,6 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         footer: "url('/assets/Home/footerbg.svg')",
+        Reservation: "url('assets/Reservation/Group 1000007790.png')",
       },
     },
   },
