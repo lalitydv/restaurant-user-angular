@@ -1,20 +1,20 @@
 <div class="my-5">
-    <div class="text-Pink mx-10 font-bold text-xl ">
+    <div class="text-Pink mx-10 font-bold text-xl cursor-pointer " (click)="goBack()">
         <i class="fa-solid fa-arrow-left my-5"></i> Back to Home
     </div>
 
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-10 items-center">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-10 ">
         <div class="  bg-white shadow-2xl rounded-xl border-0 p-5 py-10 ">
-            <div class="text-lg font-bold ">
+            <div class="text-2xl font-bold ">
                 Select Branch
             </div>
             <!-- Size  -->
             <div class="flex flex-col gap-3 my-2">
                 <div>
-                    <div class="flex items-center justify-center gap-5 md:flex-row flex-col  whitespace-nowrap my-5">
+                    <div class="flex items-center justify-start gap-5 md:flex-row flex-col  whitespace-nowrap my-5">
                         <!-- Radio Button -->
                         <div
-                            class="bg-blue  text-white px-1 rounded-full hover:bg-blue focus:outline-none focus:ring focus:ring-blue-300 flex justify-center items-center">
+                            class="bg-blue  text-white px-1 rounded-xl hover:bg-blue focus:outline-none focus:ring focus:ring-blue-300 flex justify-center items-center">
                             <input type="radio" id="radio-button" class="hidden">
                             <label for="radio-button"
                                 class="cursor-pointer border border-gray-300 rounded-full w-6 h-6 flex items-center justify-center">
@@ -23,12 +23,12 @@
 
                             <!-- Button Text -->
                             <button
-                                class=" text-white px-2 py-2 rounded-full hover:bg-blue focus:outline-none focus:ring focus:ring-blue-300">
+                                class=" text-white px-2 py-2 rounded-xl  outline-none hover:bg-blue focus:outline-none  focus:ring-0">
                                 Regular - 6
                             </button>
                         </div>
                         <div
-                            class="bg-slate-300 bg-opacity-95 text-white px-1 rounded-full hover:bg-blue focus:outline-none focus:ring focus:ring-blue-300 flex justify-center items-center">
+                            class="bg-slate-300 bg-opacity-95 text-white px-1 rounded-xl hover:bg-blue focus:outline-none focus:ring focus:ring-blue-300 flex justify-center items-center">
 
 
                             <input type="radio" id="radio-button" class="hidden">
@@ -39,7 +39,7 @@
 
                             <!-- Button Text -->
                             <button
-                                class=" text-black px-4 py-2 rounded-full hover:text-white hover:bg-blue focus:outline-none focus:ring focus:ring-blue-300">
+                                class=" text-black px-4 py-2 rounded-full hover:text-white hover:bg-blue focus:outline-none focus:ring-0">
                                 Large - 10
                                 +1.00som
                             </button>
@@ -70,10 +70,10 @@
                 <div class="mx-10 flex flex-col gap-3 my-2">
 
                     <div>
-                        <div class="flex justify-center flex-wrap gap-3 whitespace-nowrap items-center  my-5">
+                        <div class="flex justify-start flex-wrap gap-3 whitespace-nowrap items-center  my-5">
                             <!-- Radio Button -->
                             <div
-                                class="bg-Pink text-white px-1 rounded-full hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
+                                class="bg-Pink text-white px-1 rounded-xl hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
                                 <input type="radio" id="radio-button" class="hidden">
                                 <label for="radio-button"
                                     class="cursor-pointer border border-gray-300 rounded-full w-6 h-6 flex items-center justify-center">
@@ -82,12 +82,12 @@
 
                                 <!-- Button Text -->
                                 <button
-                                    class=" text-white px-4 py-2 rounded-full hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300">
+                                    class=" text-white px-4 py-2 rounded-full hover:bg-Pink focus:outline-none  focus:ring-0">
                                     Today
                                 </button>
                             </div>
                             <div
-                                class="bg-Pink bg-opacity-20 text-white px-1 rounded-full hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
+                                class="bg-Pink bg-opacity-20 text-white px-1 rounded-xl hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
 
 
                                 <input type="radio" id="radio-button" class="hidden">
@@ -103,10 +103,10 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="flex justify-center flex-wrap gap-3 whitespace-nowrap items-center  my-5">
+                        <div class="flex justify-start flex-wrap gap-3 whitespace-nowrap items-center  my-5">
                             <!-- Radio Button -->
                             <div
-                                class="bg-Pink text-white px-1 rounded-full hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
+                                class="bg-Pink text-white px-1 rounded-xl hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
                                 <input type="radio" id="radio-button" class="hidden">
                                 <label for="radio-button"
                                     class="cursor-pointer border border-gray-300 rounded-full w-6 h-6 flex items-center justify-center">
@@ -120,9 +120,7 @@
                                 </button>
                             </div>
                             <div
-                                class="bg-Pink bg-opacity-20 text-white px-1 rounded-full hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
-
-
+                                class="bg-Pink bg-opacity-20 text-white px-1 rounded-xl hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
                                 <input type="radio" id="radio-button" class="hidden">
                                 <label for="radio-button"
                                     class="cursor-pointer border border-white rounded-full w-6 h-6 flex items-center justify-center">
@@ -136,9 +134,7 @@
                                 </button>
                             </div>
                             <div
-                                class="bg-Pink bg-opacity-20 text-white px-1 rounded-full hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
-
-
+                                class="bg-Pink bg-opacity-20 text-white px-1 rounded-xl hover:bg-Pink focus:outline-none focus:ring focus:ring-pink-300 flex justify-center items-center">
                                 <input type="radio" id="radio-button" class="hidden">
                                 <label for="radio-button"
                                     class="cursor-pointer border border-white rounded-full w-6 h-6 flex items-center justify-center">
@@ -163,7 +159,7 @@
         <div class=" bg-white shadow-2xl rounded-xl border-0 p-5  ">
 
             <div class="my-5">
-                <h1 class="text-blue text-xl text-center font-bold text-bold ">Cart Summary</h1>
+                <h1 class="text-blue text-2xl text-center font-bold text-bold ">Cart Summary</h1>
             </div>
             <div class="flex justify-center">
 
@@ -188,10 +184,10 @@
                         <div>
 
                             <a
-                                class="flex flex-col items-center bg-white   rounded-lg  md:flex-row md:max-w-2xl w-full  dark:bg-gray-800 dark:hover:bg-gray-700">
-                                <img class="object-cover w-full rounded-t-lg h-20 md:h-auto md:w-20 md:rounded-none md:rounded-l-lg"
+                                class="flex flex-col items-center bg-white    md:w-96  rounded-lg  md:flex-row md:max-w-2xl w-full  dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <img class="object-cover w-full rounded-t-lg h-20 md:h-auto md:w-40  md:rounded-none md:rounded-l-lg"
                                     src="assets/Product/pizza.png" alt="">
-                                <div class="px-5 pb-5">
+                                <div class=" flex flex-col  px-10 ">
                                     <a>
                                         <h5 class="text-xl  tracking-tight text-Pink font-bold dark:text-white">
                                             Onion Rings</h5>
@@ -210,14 +206,15 @@
 
                         </div>
                     </div>
+
                     <div class="flex justify-start shadow-xl rounded-xl bg-white  p-4 flex-wrap gap-5 mx-5">
                         <div>
 
                             <a
-                                class="flex flex-col items-center bg-white   rounded-lg  md:flex-row md:max-w-2xl w-full  dark:bg-gray-800 dark:hover:bg-gray-700">
-                                <img class="object-cover w-full rounded-t-lg h-20 md:h-auto md:w-20 md:rounded-none md:rounded-l-lg"
+                                class="flex flex-col items-center bg-white    md:w-96  rounded-lg  md:flex-row md:max-w-2xl w-full  dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <img class="object-cover w-full rounded-t-lg h-20 md:h-auto md:w-40  md:rounded-none md:rounded-l-lg"
                                     src="assets/Product/pizza.png" alt="">
-                                <div class="px-5 pb-5">
+                                <div class=" flex flex-col  px-10 ">
                                     <a>
                                         <h5 class="text-xl  tracking-tight text-Pink font-bold dark:text-white">
                                             Onion Rings</h5>
@@ -236,6 +233,8 @@
 
                         </div>
                     </div>
+
+                   
 
                 </div>
             </div>
