@@ -1,0 +1,27 @@
+.bg-Pink {
+    background-color: #ff4081; /* Change to your Pink color */
+}
+
+.bg-PinkDark {
+    background-color: #c60055; /* Darker shade of Pink */
+}
+
+.bg-LightPink {
+    background-color: #ff80ab; /* Light Pink color */
+}
+
+.bg-Gray {
+    background-color: #f7f7f7; /* Gray background for alternate rows */
+}
+
+.text-Pink {
+    color: #ff4081; /* Pink text color */
+}
+
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}

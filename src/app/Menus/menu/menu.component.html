@@ -14,8 +14,8 @@
 </div>
 <div class="flex justify-around flex-wrap gap-5 mx-5">
     <div *ngFor="let tile of tiles">
-        <div
-            class="hover:shadow-xl bg-gray-100 hover:bg-LightPink hover:text-Pink hover:border-2 border-2 hover:border-Pink  rounded-lg flex justify-center items-center flex-col p-5">
+        <div data-aos="flip-up" data-aos-duration="1500"
+            class=" card-container hover:shadow-xl bg-gray-100 hover:bg-LightPink hover:text-Pink hover:border-2 border-2 hover:border-Pink  rounded-lg flex justify-center items-center flex-col p-5">
             <a href="#">
                 <img src="{{ tile.img }}" class="md:w-44 md:h-44 h-full w-full object-contain" />
             </a>

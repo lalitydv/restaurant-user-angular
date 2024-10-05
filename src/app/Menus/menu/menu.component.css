@@ -1,0 +1,19 @@
+/* ------------------------------------------- */
+
+.card-container {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-container:hover {
+  transform: translateY(-10px); /* Lifts the card upwards */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+.card-container img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-container:hover img {
+  transform: scale(1.1); /* Slight zoom on the image */
+}
+/* ------------------------------------------- */

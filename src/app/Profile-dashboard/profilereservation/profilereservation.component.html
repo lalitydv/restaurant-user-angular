@@ -1,3 +1,4 @@
+<!-- Reservation List -->
 <div *ngIf="!showEditProfile" class="p-4">
     <div class="flex justify-between flex-wrap items-center mb-4">
         <div>
@@ -7,7 +8,8 @@
                 <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
             </div>
         </div>
-        <button (click)="toggleEditProfile()" class="bg-Pink text-white px-4 py-2 rounded-md">
+        <button (click)="toggleEditProfile()"
+            class="bg-Pink text-white px-4 py-2 rounded-md transition-transform transform hover:scale-105 hover:bg-PinkDark">
             + Add Reservation
         </button>
     </div>
@@ -38,7 +40,7 @@
     </div>
 </div>
 
-
+<!-- Add Reservation Form -->
 <div *ngIf="showEditProfile" class="p-6 bg-white shadow-md rounded-md">
     <h2 class="text-lg font-bold mb-4">Add Reservation</h2>
     <div class="flex justify-start items-center mb-4">
@@ -131,11 +133,13 @@
                     </span>
                 </div>
             </div>
-        </div>
 
-        <div class="flex justify-end">
-            <button type="button" class="bg-green-600 text-white px-4 py-2 rounded-md mr-2">Save</button>
-            <button type="button" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">Close</button>
+            <div>
+                <button type="button"
+                    class="mt-4 w-full px-4 py-2 bg-Pink text-white rounded-md transition-transform transform hover:scale-105 hover:bg-PinkDark">
+                    Submit
+                </button>
+            </div>
         </div>
     </form>
 </div>

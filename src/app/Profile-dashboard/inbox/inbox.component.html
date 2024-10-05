@@ -24,17 +24,23 @@
         </div>
         <div>
             <ul class="flex  justify-between">
-                <li class="border-r-2 px-1" (click)="selectTab('Seller')"
-                    [ngClass]="{'text-Pink': selectedTab === 'Seller'}">Seller
+                <li class=" px-1" (click)="selectTab('Seller')" [ngClass]="{'text-Pink': selectedTab === 'Seller'}">
+                    Seller
                     <div class="flex justify-start items-center mb-4">
                         <div class="border-b-2 border-Pink w-10"></div>
                         <i class="fa-solid fa-circle text-Pink text-[10px] ml-1"></i>
                     </div>
                 </li>
+                <div class="border-r-2 h-10">
 
-                <li class="border-r-2 px-1" (click)="selectTab('Delivery Man')"
+                </div>
+
+                <li class=" px-1" (click)="selectTab('Delivery Man')"
                     [ngClass]="{'text-Pink': selectedTab === 'Delivery Man'}">
                     Delivery Man</li>
+                <div class="border-r-2 h-10">
+
+                </div>
                 <li (click)="selectTab('Admin')" [ngClass]="{'text-Pink': selectedTab === 'Admin'}">Admin</li>
             </ul>
         </div>

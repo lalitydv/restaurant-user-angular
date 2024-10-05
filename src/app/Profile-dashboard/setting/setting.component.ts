@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./setting.component.css']
 })
 export class SettingComponent {
+  isDropdownOpen = false;
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  selectLanguage(language: string) {
+    console.log('Selected Language:', language);
+    this.isDropdownOpen = false; // Close dropdown after selection
+  }
 
 }
