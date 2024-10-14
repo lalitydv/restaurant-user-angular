@@ -156,7 +156,7 @@
     </div>
 
     <div class="relative mb-6">
-        <div class="p-4 overflow-x-auto w-full mx-auto pt-10">
+        <!-- <div class="p-4 overflow-x-auto w-full mx-auto pt-10">
             <ul role="list" class="flex space-x-8 justify-center items-center">
                 <li *ngFor="let event of events" class="relative">
                     <div>
@@ -179,7 +179,118 @@
                     </div>
                 </li>
             </ul>
+        </div> -->
+
+
+
+        <div class="relative">
+            <!-- Timeline -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-4">
+
+                <!-- Order Placed -->
+                <div class="text-center bg-white shado rounded-2xl py-5 px-2">
+                    <div class="flex justify-center items-center mb-2">
+                        <div class="bg-blue-600 p-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-Pink" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2m16-4h2a2 2 0 002-2v-5a2 2 0 00-2-2h-2m-4 0h4m-5 0a3 3 0 11-6 0m6 0V5a2 2 0 00-2-2H9a2 2 0 00-2 2v5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400">19 Nov 2023: 10:45</p>
+                    <p class="text-sm font-medium text-blue-400 md:w-36 w-full">Order placed</p>
+                </div>
+
+                <!-- Payment Accepted -->
+                <div class="text- bg-white shado rounded-2xl py-5 px-2">
+                    <div class="flex justify-center items-center mb-2">
+                        <div class="bg-blue-600 p-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-Pink" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M11 12h9M3 12h1m6 4h5m-5-8h5m-5 8h5M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400">19 Nov 2023: 10:47</p>
+                    <p class="text-sm font-medium text-blue-400 md:w-36 w-full">Payment accepted</p>
+                </div>
+
+                <!-- Products delivered to the courier -->
+                <div class="text-center bg-white shado rounded-2xl py-5 px-2">
+                    <div class="flex justify-center items-center mb-2">
+                        <div class="bg-blue-600 p-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-Pink" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 3h18M9 3v12m6-12v12M6 21h12a3 3 0 003-3v-6a3 3 0 00-3-3H6a3 3 0 00-3 3v6a3 3 0 003 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400">22 Nov 2023: 12:27</p>
+                    <p class="text-sm font-medium text-blue-400 md:w-36 w-full">Products delivered to the courier - DHL
+                    </p>
+                </div>
+
+                <!-- Products in the warehouse -->
+                <div class="text-center bg-white shado rounded-2xl py-5 px-2">
+                    <div class="flex justify-center items-center mb-2">
+                        <div class="bg-blue-600 p-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-Pink" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 7h18M3 10h18M5 10v8a2 2 0 002 2h10a2 2 0 002-2v-8" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400">23 Nov 2023: 15:15</p>
+                    <p class="text-sm font-medium text-blue-400 md:w-36 w-full ">Products in the courier's warehouse</p>
+                </div>
+
+                <!-- Products in delivery progress -->
+                <div class="text-center bg-white shado rounded-2xl py-5 px-2">
+                    <div class="flex justify-center items-center mb-2">
+                        <div class="bg-blue-600 p-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-Pink" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 17v-6h6v6a2 2 0 002 2h2a2 2 0 002-2v-5a2 2 0 00-2-2h-2V7a4 4 0 00-8 0v3H4a2 2 0 00-2 2v5a2 2 0 002 2h2a2 2 0 002-2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400">Today</p>
+                    <p class="text-sm font-medium text-blue-400 md:w-36 w-full">Products in delivery progress</p>
+                </div>
+
+                <!-- Estimated delivery -->
+                <div class="text-center bg-white shado rounded-2xl py-5 px-2">
+                    <div class="flex justify-center items-center mb-2">
+                        <div class="bg-blue-600 p-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-Pink" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4M7 12a5 5 0 1110 0 5 5 0 01-10 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400">Estimated delivery tomorrow</p>
+                    <p class="text-sm font-medium text-blue-400 md:w-36 w-full">Products delivered</p>
+                </div>
+            </div>
+
+            <!-- progress-bar.component.html -->
+            <div class="h-1 bg-gray-700 w-full">
+                <!-- Dynamically bind the style.width using Angular -->
+                <div class="h-1 bg-pink-600" [style.width]="progress + '%'"></div>
+            </div>
+
+            <p class="text-sm text-gray-500 mt-2">Progress: {{ progress }}%</p>
+
         </div>
+
+
+
     </div>
 
 

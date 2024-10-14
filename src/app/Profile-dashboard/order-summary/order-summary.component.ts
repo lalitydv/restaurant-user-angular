@@ -99,4 +99,23 @@ export class OrderSummaryComponent {
       this.newMessage = '';
     }
   }
+
+  progress: number = 0; // Set initial progress to 0
+
+  // Simulating a real order tracking scenario
+  ngOnInit() {
+    this.trackOrderProgress();
+  }
+
+  // Simulate tracking the order progress
+  trackOrderProgress() {
+    const interval = setInterval(() => {
+      if (this.progress < 80) { // Simulate up to 80% completion
+        this.progress += 20; // Increment by 20% every 2 seconds
+      } else {
+        clearInterval(interval); // Stop when it reaches 80%
+      }
+    }, 2000); // Update every 2 seconds for demo purposes
+  }
+
 }

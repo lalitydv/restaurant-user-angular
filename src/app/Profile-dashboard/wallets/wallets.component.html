@@ -7,11 +7,10 @@
     </div>
     <!-- Total Points and Instructions -->
     <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-
         <div class=" col-span-2 bg-LightPink  p-2 rounded-lg">
             <div class="flex items-center justify-between flex-wrap  relative">
                 <div class="bg-LightPink p-4 rounded-lg">
-                    <img src="assets/image 279.png" alt="Star Icon" class="w-20 h-20 object-cover">
+                    <img src="assets/image 279.png" alt="Star Icon" class="w-10 h-10 object-cover">
 
                     <div class="text-xl font-bold">
                         Total Balance
@@ -35,11 +34,11 @@
             class="bg-Gray col-span-3  p-4 rounded-2xl border-l-8 border-Pink flex justify-between items-center md:flex-row flex-col">
             <div>
                 <h4 class="text-xl font-bold text-Pink">Add 100 get 10% Extras</h4>
-                <h4 class="text-xl font-bold text-Pink">Valid Till Jul 9, 2026 </h4>
-                <h4 class="text-lg font-bold">You have to add min 100 Fund to get max of 200 </h4>
+                <h4 class="text-base font-bold text-Pink">Valid Till Jul 9, 2026 </h4>
+                <h4 class="text-base font-bold">You have to add min 100 Fund to get max of 200 </h4>
             </div>
             <div class="">
-                <img src="assets/image 281.png" alt="">
+                <img src="assets/image 281.png" alt="" class="md:h-40 md:w-40 h-full w-full">
             </div>
         </div>
     </div>
@@ -49,15 +48,39 @@
 
 
         <h4 class="text-lg font-bold mt-6">Wallet History</h4>
-        <Select class="p-2 rounded-md text-Pink border-Pink outline-none font-bold">
-            <option value="All Transaction">All Transaction</option>
-            <option value="All Transaction">All Transaction</option>
-        </Select>
+        <div class="relative inline-block text-left" (clickOutside)="closeDropdown()">
+            <div>
+                <button type="button"
+                    class="inline-flex justify-center w-full px-4 py-2 bg-pink-500 text-white font-bold rounded-md hover:bg-pink-600 transition duration-150 ease-in-out"
+                    (click)="toggleDropdown()">
+                    Select Option
+                    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+
+            <div *ngIf="isOpen"
+                class="absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-300 ease-out"
+                [ngClass]="{
+                'scale-100 opacity-100': isOpen,
+                'scale-95 opacity-0': !isOpen
+              }">
+                <div class="py-1" role="menu" aria-orientation="vertical">
+                    <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-100" role="menuitem">All
+                        Transactions</a>
+                    <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-100" role="menuitem">Completed</a>
+                    <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-100" role="menuitem">Pending</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div *ngIf="pointsHistory.length === 0" class="text-center">
-        <img src="https://static.thenounproject.com/png/4143644-200.png" alt="No Data Found" class="w-20 h-20 mx-auto">
-        <p class="text-gray-500 mt-10">No Data Found</p>
+        <img src="https://static.thenounproject.com/png/4143644-200.png" alt="No Data Found" class="w-16 h-16 mx-auto">
+        <p class="text-gray-500 mt-1">No Data Found</p>
     </div>
     <!-- Add more content for points history when available -->
 </div>

@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 export class WalletsComponent {
   totalPoints: any = '$10 .00';
   pointsHistory: any[] = []; // Empty array to simulate "No Data Found"
+  isOpen = false;
+
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
+  }
+
+  closeDropdown() {
+    this.isOpen = false;
+  }
 }
