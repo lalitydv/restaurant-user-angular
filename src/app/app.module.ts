@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +43,7 @@ import { WishlistComponent } from './Profile-dashboard/wishlist/wishlist.compone
 import { InboxComponent } from './Profile-dashboard/inbox/inbox.component';
 import { ReferralCodeComponent } from './Profile-dashboard/referral-code/referral-code.component';
 import { ProfilereservationComponent } from './Profile-dashboard/profilereservation/profilereservation.component';
+import { ProductViewComponent } from './product-view/product-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,24 +83,25 @@ import { ProfilereservationComponent } from './Profile-dashboard/profilereservat
     InboxComponent,
     ReferralCodeComponent,
     ProfilereservationComponent,
-    
-   
+    ProductViewComponent,
+
+
   ],
   imports: [
     FontAwesomeModule,
     BrowserModule,
     AppRoutingModule,
-  
-    
    
-    
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
-  
+
 })
 export class AppModule implements OnInit {
   ngOnInit(): void {
     initFlowbite();
   }
- }
+}

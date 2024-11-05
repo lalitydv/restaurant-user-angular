@@ -17,7 +17,7 @@
     </div>
     <div class="flex justify-between flex-wrap gap-5 items-center mb-4">
         <div>
-            <div class="flex items-center gap-5">
+            <div class="flex md:flex-row flex-col justify-start items-center gap-5">
                 <p class="text-lg font-bold">Order# 10098</p>
                 <span class="bg-[#D9E9FC] text-[#104A8E] py-1 px-3 rounded-2xl text-sm font-bold">Pending</span>
                 <span class="bg-[#D5FFBA] text-[#5C9E31] py-1 px-3 rounded-2xl text-sm ml-2  font-bold">Home
@@ -26,7 +26,7 @@
             <p class="text-sm text-gray-500 my-2">Order date : <span class="font-bold text-black">Aug 12, 2024 02:46
                     pm</span></p>
         </div>
-        <div>
+        <div class="flex justify-center md:flex-row flex-wrap gap-5">
             <button (click)="toggleEditProfile()"
                 class=" text-Pink border-Pink border font-bold py-2 px-4 rounded-lg text-sm">Track
                 Order</button>
@@ -36,52 +36,52 @@
     <div class="border-b border-Gray mb-4"></div>
 
     <div class="grid md:grid-cols-4 grid-cols-1 gap-5 mb-4">
-        <div class="col-span-2">
-            <div class="flex mb-4 bg-Gray rounded-md px-2 p-5">
+        <div class="col-span-2 flex justify-center flex-col items-center px-4 py-5 w-full">
+            <!-- Item Info -->
+            <div class="flex flex-col md:flex-row mb-4 justify-center items-center bg-gray-100 rounded-md px-2 p-5 w-full">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTISptptNMXJPRUo9UG0OwXm6XSY4bFjrHaiQ&s"
                     alt="Cake" class="rounded-lg w-16 h-16">
-                <div class="ml-4 flex justify-between items-center w-full">
-                    <div class="flex-col flex">
-
-
+                <div class="ml-4 flex md:flex-row flex-col justify-between items-center w-full">
+                    <div class="flex flex-col">
                         <h3 class="text-lg font-semibold">Cake</h3>
                         <p class="text-sm text-gray-500">Variation: Size(Small)</p>
                         <p class="text-sm text-gray-500">Unit Price: $90.00</p>
                     </div>
-                    <div class="flex-col flex justify-end">
-
-
+                    <div class="flex flex-col justify-end">
                         <p class="text-2xl font-bold">$460.00</p>
                         <p class="text-sm text-gray-500 text-end">Qty: 2</p>
                     </div>
                 </div>
             </div>
-            <div>
+
+            <!-- Restaurant Info -->
+            <div class="w-full">
                 <h3 class="text-lg font-semibold">Restaurants Information</h3>
-                <div class="flex items-center mt-2 bg-Gray rounded-md py-5 px-2 font-bold">
+                <div class="flex flex-col md:flex-row items-center mt-2 bg-gray-100 rounded-md py-5 px-2">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmjuL2lA07AURQakeDffVqFQyLEyu_GKShdg&s"
-                        alt="Cafe Monarch" class="rounded-lg w-32 h-32">
+                        alt="Cafe Monarch" class="rounded-lg w-24 h-24 md:w-32 md:h-32">
                     <div class="ml-4">
                         <h4 class="text-2xl font-bold">Café Monarch</h4>
                         <div class="flex items-center mt-1">
                             <span class="bg-yellow-300 text-white py-1 px-2 rounded-lg text-sm">5.0</span>
                             <i class="fas fa-star text-yellow-300"></i>
                         </div>
-                        <p class="text-sm text-black">Address: Ghatkopar - Manikhurd Link Road, Indian Oil Nagar,
-                            Mumbai
+                        <p class="text-sm text-black">Address: Ghatkopar - Manikhurd Link Road, Indian Oil Nagar, Mumbai
                         </p>
-
                     </div>
                 </div>
             </div>
-            <div class="font-bold">
+
+            <!-- Payment Info -->
+            <div class="font-bold w-full">
                 <h3 class="text-lg font-bold">Payment Information</h3>
-                <div class="flex justify-between px-10 py-5">
+                <div class="flex flex-col md:flex-row justify-between px-5 py-3 bg-gray-100 rounded-md">
                     <p class="text-sm text-black">Method: Cash on delivery</p>
-                    <p class=" font-bold text-sm">Payment Status: <span class="text-red-500">Unpaid</span> </p>
+                    <p class="font-bold text-sm">Payment Status: <span class="text-red-500">Unpaid</span></p>
                 </div>
             </div>
         </div>
+
 
         <div class="flex col-span-2 ">
             <div class="w-full bg-pink-50 border-Pink border-2 p-4 rounded-2xl">
@@ -128,7 +128,7 @@
 </div>
 
 <!-- Second div Trecter div -->
-<div *ngIf="showEditProfile && !showThirdDiv" class="p-3 bg-white rounded  mx-auto">
+<div *ngIf="showEditProfile && !showThirdDiv" class="p-1 bg-white rounded  mx-auto">
     <div>
         <h3 class="text-lg font-bold">Orders</h3>
         <div class="flex items-center">
@@ -145,7 +145,7 @@
             <span class="bg-blue-200 text-blue-800 text-sm px-2 py-1 rounded">Pending</span>
             <span class="bg-green-200 text-green-800 text-sm px-2 py-1 rounded">Home Delivery</span>
         </div>
-        <div class="flex items-center gap-5 justify-between mb-6">
+        <div class="flex items-center whitespace-nowrap my-5 gap-5 justify-between mb-6">
             <button (click)="toggleThirdDiv()" class="bg-pink-500 text-white px-4 py-2 rounded">Track Order</button>
             <button class="bg-red-500 text-white px-4 py-2 rounded">Cancel Order</button>
         </div>

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ProfileMainComponent {
   selectedTab: string = 'profile'; // Default tab
+  isMenuOpen: boolean = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
